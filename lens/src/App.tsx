@@ -17,13 +17,12 @@ function PhraseBox(props: PhraseBoxProps) {
 
     let translation = null;
     if (showTranslation) {
-        translation = <span className="PhraseBox-Translation">({props.translation})</span>;
+        translation = <span className="PhraseBox-Translation">{props.translation}</span>;
     }
-
     return <span
         onClick={() => props.toggle(props)}
         className="PhraseBox">
-        {props.phrase}
+            <span className="PhraseBox-Phrase">{props.phrase}</span>
         {translation}
         </span>;
 }
