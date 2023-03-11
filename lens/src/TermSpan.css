@@ -1,0 +1,23 @@
+.TermSpan {
+    display: inline-block;
+    text-align: center;
+}
+
+.TermSpan:active {
+    color: red;
+}
+
+.TermSpan.Active {
+    color: red;
+    font-weight: bold;
+}
+
+.TermSpan + .TermSpan {
+    margin-left: 0.3em;
+}
+
+.TermSpan .Translation {
+    font: 0.7em sans-serif;
+    vertical-align: sub;
+    color: green;
+}
