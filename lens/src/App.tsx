@@ -1,8 +1,7 @@
 import React from "react";
 import "./App.css";
-import { TranslatedTerm } from "./term";
 import { TranslatedTextBox } from "./TranslatedTextBox";
-import { FRENCH_FRANKENSTEIN_CONTENT } from "./samples";
+import { FRENCH_FRANKENSTEIN_CONTENT } from "./sampleContent";
 
 function App() {
   return <TranslatedTextBox content={FRENCH_FRANKENSTEIN_CONTENT} />;
