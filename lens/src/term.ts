@@ -6,7 +6,7 @@ export interface TranslatedTerm {
 export type Content = string | TranslatedTerm;
 
 export function termKey(term: TranslatedTerm) {
-  return `${term.phrase}:${term.translation}`;
+  return term.phrase.toLowerCase();
 }
 
 export function buildTerm(phrase: string, translation: string): TranslatedTerm {

@@ -8,13 +8,13 @@ import { selectTermSpan } from "./features/termSpanSelectionSlice";
 export function TermSpan(props: TranslatedTerm) {
   let spanId = React.useState(Math.random())[0];
 
-  const { isKnown, isActive } = useSelector((state: any) => ({
-    isKnown: state.vocab.value[termKey(props)],
+  const { inVocab, isActive } = useSelector((state: any) => ({
+    inVocab: state.vocab.value[termKey(props)],
     isActive: state.termSpanSelection.value === spanId,
   }));
   const dispatch = useDispatch();
 
-  const showTranslation = !isKnown && props.phrase !== props.translation;
+  const showTranslation = !inVocab && props.phrase !== props.translation;
 
   let translation = null;
   if (showTranslation) {
